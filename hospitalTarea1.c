@@ -99,6 +99,7 @@ int agregarCamas(cama** camas, int** disponibles, int totalCamas, int* totalDisp
 	return totalCamas;
 }
 
+//Agregar Paciente nuevo
 void agregarPaciente(cama* camas, int id, int maxLen) {
 	printf("Cama %d\n", id);
 	cama* c = camas + id - 1;

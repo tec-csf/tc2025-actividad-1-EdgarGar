@@ -1,0 +1,8 @@
+all:
+    clang -wall hospitalTarea1.c -o hospital
+exec:
+    ./hospital
+clean:
+    rm -rf hospital
+    rm -rf *.exe
+    rm -rf *.o
