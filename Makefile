@@ -1,6 +1,12 @@
+#Mekefile 
+CC = clang
+CFLAGS = -Wall
+OBJ = hospital
 all:
-    clang -wall gcc -o hospital hospitalTarea1.c hospitalTarea1.c
+    $(CC) $(CFLAGS) -wall hospitalTarea1.c -o $(OBJ)
 exec:
     ./hospital
 clean:
-    
+    rm -rf hospital
+    rm -rf *.exe
+    rm -rf *.o
