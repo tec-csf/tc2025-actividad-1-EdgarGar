@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+//Estructuras
 typedef struct {
 	char* nombre;
 	char* apellidos;
@@ -44,7 +45,7 @@ int main() {
 
 	//Menu 
 	do {
-		printf("\n1. Incorporar paciente\n2. Buscar cama\n3. Dar de alta a paciente\n4. Listar pacientes\n5. Ver camas disponibles\n0. Salir \nSelecciona: ");
+		printf("\n1. Incorporar paciente\n2. Buscar cama\n3. Dar de alta a paciente\n4. Lista de pacientes\n5. Ver camas disponibles\n0. Salir \nSelecciona una opcion: ");
 		scanf("%d", &opcion);
 		getchar();
 
@@ -120,18 +121,21 @@ void agregarPaciente(cama* camas, int id, int maxLen) {
 	obtenerDatos(c->p->telefono, maxLen);
 }
 
+//Agregar
 int agregarDisponible(int** disponibles, int id, int total) {
 	*disponibles = realloc(*disponibles, (total + 1) * sizeof(int));
 	*(*disponibles + total) = id;
 	return total + 1;
 }
 
+//Busqueda de Disponibilidad
 int encontrarDisponible(int** disponibles, int* total) {
 	int id = *(*disponibles + --(*total));
 	*disponibles = realloc(*disponibles, *total * sizeof(int));
 	return id;
 }
 
+//Busqueda de Cama
 int buscarCama(int total) {
 	int id;	
 	printf("ID de la cama: ");
