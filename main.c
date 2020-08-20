@@ -34,7 +34,9 @@ char* obtenerDatos(char* str, int maxLen);
 
 int main() {
 	int numInicial, maxLen, totalCamas = 0, totalDisponibles = 0, opcion, id;
-	printf("Tamaño maximo del nombre: ");
+	printf("---------Bienvenido al Registro Hospitalario--------------");
+	//Se ingresa una cadena maxima para reservar un cierto espacio de memoria
+	printf("\nTamaño maximo del nombre: ");
 	scanf("%d", &maxLen);
 	printf("Número inicial de camas: ");
 	scanf("%d", &numInicial);
